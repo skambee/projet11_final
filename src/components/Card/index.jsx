@@ -1,7 +1,4 @@
-/**
- * Carte réutilisable représentant un logement sur la page d'accueil.
- * Le titre et l'image sont reçus depuis le composant Home via les props.
- */
+// Carte réutilisable affichant l'image et le titre d'un logement.
 function Card({ title, picture }) {
   return (
     <div className="card">
