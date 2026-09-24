@@ -32,7 +32,7 @@ function Home() {
         className="banner"
       />
 
-      <section className="rental-section">
+      <div className="rental-section">
         <div className="rental-section__cards-container">
           {/*
             rentalList.map(...)
@@ -56,7 +56,7 @@ function Home() {
             </Link>
           ))}
         </div>
-      </section>
+      </div>
     </div>
   )
 }
