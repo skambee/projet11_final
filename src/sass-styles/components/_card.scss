@@ -19,7 +19,7 @@
         &::before{
             content:"";
             background-color: darken($color-primary, 55%);
-            opacity: 40%;
+            opacity: 0.4;
         }
     }
     &::before{
