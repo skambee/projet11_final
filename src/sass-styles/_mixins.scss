@@ -38,7 +38,7 @@
  * Sass génère alors la media query correspondante automatiquement.
  */
 @mixin smartphone-responsive {
-    @media all and (max-width: map-get($breakpoints, smartphone)) {
+    @media all and (max-width: 767px) {
         @content;
     }
 }
