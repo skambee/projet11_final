@@ -37,7 +37,7 @@ function Carousel({ slides, title = 'Logement' }) {
             className="carousel__slider__pictures"
             key={slide}
             src={slide}
-            alt={`${title} - photo ${index + 1}`}
+            alt={`${title} - vue ${index + 1}`}
           />
         ))}
       </div>
