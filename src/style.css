@@ -29,7 +29,7 @@ ul, li {
   color: white;
   transition: transform 200ms ease-in-out;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .expand_icon {
     width: 18px;
   }
@@ -42,7 +42,7 @@ ul, li {
 .arrow {
   height: 80px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .arrow {
     height: 24px;
   }
@@ -67,7 +67,7 @@ ul, li {
   border-radius: 25px;
   overflow: hidden;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .banner {
     width: calc(100% - 40px);
     justify-content: flex-start;
@@ -81,7 +81,7 @@ ul, li {
     margin: 40px auto;
   }
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .banner--higher {
     justify-content: flex-start;
     height: 223px;
@@ -98,7 +98,7 @@ ul, li {
   z-index: 0;
   content: "";
   background-color: black;
-  opacity: 30%;
+  opacity: 0.3;
 }
 .banner__img {
   width: 100%;
@@ -113,7 +113,7 @@ ul, li {
   font-weight: 500;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .banner__title {
     font-size: 24px;
   }
@@ -134,7 +134,7 @@ ul, li {
   overflow: hidden;
   transition: box-shadow 200ms ease-in-out;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .card {
     height: 255px;
     width: 100%;
@@ -149,7 +149,7 @@ ul, li {
 .card:hover::before {
   content: "";
   background-color: #470000;
-  opacity: 40%;
+  opacity: 0.4;
 }
 .card::before {
   position: absolute;
@@ -189,7 +189,7 @@ ul, li {
   overflow: hidden;
   border-radius: 25px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .carousel {
     height: 255px;
     border-radius: 25px;
@@ -214,7 +214,7 @@ ul, li {
   object-fit: cover;
   object-position: center;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .carousel__slider__pictures {
     height: 255px;
     max-height: 255px;
@@ -242,7 +242,7 @@ ul, li {
   right: 50%;
   margin: 0;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .carousel__commands__photocount {
     display: none;
   }
@@ -265,7 +265,7 @@ ul, li {
 .collapse--small {
   width: 45%;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .collapse--small {
     width: 100%;
   }
@@ -289,7 +289,7 @@ ul, li {
   transition: background-color 200ms ease-in-out;
   border-radius: 5px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .collapse__title-container {
     height: 30px;
   }
@@ -302,7 +302,7 @@ ul, li {
   font-size: 24px;
   font-weight: 500;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .collapse__title-container__title {
     font-size: 13px;
   }
@@ -315,7 +315,7 @@ ul, li {
   background-color: #F6F6F6;
   border-radius: 5px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .collapse__text {
     font-size: 12px;
   }
@@ -333,7 +333,7 @@ ul, li {
   font-size: 288px;
   margin: 1%;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .error__title {
     font-size: 96px;
   }
@@ -347,7 +347,7 @@ ul, li {
   font-size: 36px;
   margin-bottom: 10%;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .error__message {
     font-size: 18px;
     margin-bottom: 15%;
@@ -362,7 +362,7 @@ ul, li {
 .error__redirect {
   font-size: 18px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .error__redirect {
     font-size: 14px;
   }
@@ -392,7 +392,7 @@ ul, li {
   color: #ffffff;
   text-align: center;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .footer__disclaimer {
     width: 135px;
     font-size: 12px;
@@ -412,7 +412,7 @@ ul, li {
   width: 86%;
   margin: 50px auto;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .header {
     width: calc(100% - 40px);
     flex-wrap: wrap;
@@ -422,7 +422,7 @@ ul, li {
 .header__logo {
   height: 68px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .header__logo {
     height: 47px;
   }
@@ -434,7 +434,7 @@ ul, li {
   font-size: 24px;
   font-weight: 500;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .header__nav {
     font-size: 12px;
     gap: 10px;
@@ -450,7 +450,7 @@ ul, li {
   width: 36px;
   height: 36px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .rating-container__stars {
     width: 18px;
     height: 18px;
@@ -465,7 +465,7 @@ ul, li {
   padding: 0px;
   margin: 20px 0;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .tags {
     margin: 15px 0;
   }
@@ -482,7 +482,7 @@ ul, li {
   font-weight: 500;
   padding: 0px 15px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .tags__text {
     height: 18px;
     font-size: 10px;
@@ -493,7 +493,7 @@ ul, li {
   width: 71%;
   margin: auto;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .kasa-values {
     width: calc(100% - 40px);
   }
@@ -506,7 +506,7 @@ ul, li {
   padding: 60px 50px;
   border-radius: 25px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .rental-section {
     width: calc(100% - 40px);
     background-color: white;
@@ -520,7 +520,7 @@ ul, li {
   gap: 50px;
   width: 100%;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .rental-section__cards-container {
     flex-direction: column;
     flex-wrap: nowrap;
@@ -537,7 +537,7 @@ ul, li {
   width: 86%;
   margin: auto;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .rental-page {
     width: calc(100% - 40px);
   }
@@ -548,7 +548,7 @@ ul, li {
   justify-content: space-between;
   margin: 20px auto;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .rental-info-container {
     display: flex;
     flex-direction: column;
@@ -561,7 +561,7 @@ ul, li {
   font-size: 36px;
   font-weight: 500;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .rental-info__title {
     font-size: 18px;
   }
@@ -571,7 +571,7 @@ ul, li {
   margin: 0;
   font-weight: 500;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .rental-info__location {
     font-size: 14px;
   }
@@ -582,7 +582,7 @@ ul, li {
   flex-direction: column;
   gap: 15px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .renter-info {
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -602,7 +602,7 @@ ul, li {
   font-size: 18px;
   margin: 0;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .renter-info__identity__name {
     font-size: 12px;
   }
@@ -612,7 +612,7 @@ ul, li {
   width: 64px;
   border-radius: 90px;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .renter-info__identity__pic {
     height: 32px;
     width: 32px;
@@ -623,7 +623,7 @@ ul, li {
   display: flex;
   justify-content: space-between;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .rental-collapse-container {
     flex-direction: column;
   }
