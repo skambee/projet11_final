@@ -1,0 +1,22 @@
+@import "./variables";
+@import "./mixins";
+@import "./global";
+@import "./typography";
+@import "./icons";
+
+//Components import 
+@import "./components/banner";
+@import "./components/card";
+@import "./components/carousel";
+@import "./components/collapse";
+@import "./components/error";
+@import "./components/footer";
+@import "./components/header";
+@import "./components/rating";
+@import "./components/tags";
+
+
+//Pages layout import 
+@import "./pages/about-Kasa";
+@import "./pages/home";
+@import "./pages/rental";

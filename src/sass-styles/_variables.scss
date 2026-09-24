@@ -1,0 +1,29 @@
+/*
+ * VARIABLES SASS GLOBALES
+ * -----------------------
+ * Ce fichier centralise les valeurs réutilisées dans plusieurs feuilles de style.
+ *
+ */
+
+// Couleur principale de l'identité visuelle Kasa.
+$color-primary :     #FF6060;
+
+// Couleur secondaire utilisée pour certains éléments visuels.
+$color-secondary :   #C4C4C4;
+
+// Fond gris clair utilisé notamment derrière la liste des logements et les Collapse.
+$background-color :  #F6F6F6;
+
+// Dégradé utilisé pour améliorer la lisibilité du texte sur les cartes.
+$gradient-to-black : linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+/*
+ * BREAKPOINTS RESPONSIVE
+ * ----------------------
+ * Les dimensions sont regroupées dans une map Sass puis récupérées avec map-get()
+ * dans les mixins responsive.
+ */
+$breakpoints: (
+    smartphone: 768px,
+    tablet: 1024px,
+);

@@ -1,0 +1,7 @@
+.kasa-values {
+    width: 71%;
+    margin: auto;
+    @include smartphone-responsive {
+        width: calc(100% - 40px);
+    }
+}

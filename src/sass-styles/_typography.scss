@@ -1,0 +1,26 @@
+//Settle global base for typography
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: $color-primary;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+//Specific categories
+.active-link {
+    text-decoration: underline;
+}
+
+
+//Font weight map
+$font-weight: (
+    light: 400,
+    regular: 500,
+    bold: 700,
+);

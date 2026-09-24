@@ -1,0 +1,71 @@
+/*
+ * Styles du carrousel.
+ * Le conteneur masque les images hors zone visible et le slider est déplacé
+ * horizontalement par React grâce à transform: translateX(...).
+ * Les mixins responsive adaptent la hauteur de la galerie selon l'écran.
+ */
+.carousel {
+    position: relative;
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 415px;
+    overflow: hidden;
+    @include rounded-corner-big;
+    @include smartphone-responsive {
+        height: 255px;
+        @include rounded-corner-big;
+    }
+    @include tablet-responsive {
+        height: 330px;
+    }
+    &__slider {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        transition: transform 800ms ease-in-out;
+            &__pictures {
+                height: 415px;
+                max-height: 415px;
+                width: 100%;
+                min-width: 100%;
+                object-fit: cover;
+                @include smartphone-responsive {
+                    height: 255px;
+                    max-height: 255px;
+                }
+                @include tablet-responsive {
+                    height: 330px;
+                    max-height: 330px;
+                }
+                object-position: center;
+            }
+    }
+    &__commands {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 1%;
+            &__photocount {
+                position: absolute;
+                color: white;
+                font-size: 18px;
+                bottom: 2%;
+                right: 50%;
+                margin: 0;
+                @include smartphone-responsive {
+                    display: none;
+                }
+                @include tablet-responsive {
+                    font-size: 14px;
+                }
+            }
+            &__buttons {
+                border: none;
+                background-color: transparent;
+    cursor: pointer;
+            }
+        }
+}

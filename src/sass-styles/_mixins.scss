@@ -1,0 +1,56 @@
+/*
+ * MIXINS SASS RÉUTILISABLES
+ * -------------------------
+ * Un mixin permet de regrouper plusieurs règles ou comportements CSS récurrents
+ * puis de les réutiliser avec @include.
+ *
+ */
+
+// Arrondi important, utilisé sur les gros conteneurs.
+@mixin rounded-corner-big{
+    border-radius: 25px;
+}
+
+// Arrondi intermédiaire.
+@mixin rounded-corner-medium {
+    border-radius: 10px;
+}
+
+// Petit arrondi, utilisé notamment sur les Collapse.
+@mixin rounded-corner-small {
+    border-radius: 5px;
+}
+
+// Ombre de texte réutilisable quand un texte doit rester lisible sur une image.
+@mixin text-shadow{
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*
+ * RESPONSIVE SMARTPHONE
+ * ---------------------
+ * @content représente les règles écrites à l'intérieur du @include.
+ * Exemple :
+ * @include smartphone-responsive {
+ *   font-size: 18px;
+ * }
+ *
+ * Sass génère alors la media query correspondante automatiquement.
+ */
+@mixin smartphone-responsive {
+    @media all and (max-width: map-get($breakpoints, smartphone)) {
+        @content;
+    }
+}
+
+/*
+ * RESPONSIVE TABLETTE
+ * -------------------
+ * La règle s'applique entre le breakpoint smartphone et le breakpoint tablette.
+ * Les valeurs viennent de la map $breakpoints du fichier _variables.scss.
+ */
+@mixin tablet-responsive {
+    @media all and (min-width: map-get($breakpoints, smartphone)) and (max-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
