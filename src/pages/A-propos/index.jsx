@@ -1,16 +1,8 @@
-// Composants réutilisables de la page.
 import Banner from '../../components/Banner'
 import Collapse from '../../components/Collapse'
-
-// Image spécifique à la bannière de la page À propos.
 import aboutBanner from '../../assets/banner_aboutkasa.png'
 
-/**
- * Les valeurs de Kasa sont stockées dans un tableau d'objets.
- * Chaque objet possède exactement les informations nécessaires au Collapse :
- * un title et un text.
- *
- */
+// Données utilisées pour générer les différents Collapse de la page.
 const values = [
   {
     title: 'Fiabilité',
@@ -30,31 +22,19 @@ const values = [
   },
 ]
 
-/**
- * PAGE À PROPOS
- * -------------
- * Cette page illustre la réutilisation de composants :
- * - Banner est réutilisé avec une image/classe différentes ;
- * - Collapse est généré quatre fois à partir du tableau values.
- */
+// Page À propos construite à partir des composants Banner et Collapse.
 function AboutKasa() {
   return (
     <div>
       <Banner
         picture={aboutBanner}
-        // Aucun titre visible n'est requis sur cette bannière.
         title=""
         className="banner banner--higher"
       />
 
       <div className="kasa-values">
-        {/*
-          map() génère un Collapse pour chaque valeur de Kasa.
-          item.title et item.text sont transmis comme props.
-        */}
         {values.map((item) => (
           <Collapse
-            // Le titre est unique dans ce tableau et constitue donc une key stable.
             key={item.title}
             title={item.title}
             text={item.text}
