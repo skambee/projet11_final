@@ -1,9 +1,6 @@
-// Link permet de revenir à l'accueil sans rechargement complet de l'application.
 import { Link } from 'react-router-dom'
 
-/**
- * Page d'erreur réutilisée pour les routes inconnues et les identifiants de logement invalides.
- */
+// Page 404 utilisée pour les routes ou identifiants de logement invalides.
 function Error() {
   return (
     <div className="error">
