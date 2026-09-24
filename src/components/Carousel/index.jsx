@@ -62,7 +62,7 @@ function Carousel({ slides, title = 'Logement' }) {
   }
 
   return (
-    <div className="carousel" aria-label={`Galerie photos : ${title}`}>
+    <div className="carousel" role="region" aria-label={`Galerie photos : ${title}`}>
       {/*
         PRINCIPE DU SLIDER
         -----------------
