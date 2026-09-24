@@ -1,7 +1,6 @@
-// Import du logo blanc adapté au fond sombre du pied de page.
 import logoWhite from '../../assets/logo_white.svg'
 
-/** Pied de page commun affiché sous toutes les routes de l'application. */
+// Pied de page commun à l'ensemble de l'application.
 function Footer() {
   return (
     <footer className="footer">
