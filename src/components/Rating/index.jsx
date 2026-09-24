@@ -15,7 +15,7 @@ function Rating({ rating }) {
   const range = [1, 2, 3, 4, 5]
 
   return (
-    <div className="rating-container" aria-label={`Note : ${rating} sur 5`}>
+    <div className="rating-container" role="img" aria-label={`Note : ${rating} sur 5`}>
       {range.map((rangeElem) => (
         <img
           className="rating-container__stars"
