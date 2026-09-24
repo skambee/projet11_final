@@ -47,7 +47,7 @@ function AboutKasa() {
         className="banner banner--higher"
       />
 
-      <section className="kasa-values">
+      <div className="kasa-values">
         {/*
           map() génère un Collapse pour chaque valeur de Kasa.
           item.title et item.text sont transmis comme props.
@@ -61,7 +61,7 @@ function AboutKasa() {
             className="collapse"
           />
         ))}
-      </section>
+      </div>
     </div>
   )
 }
