@@ -1,90 +1,43 @@
-// useParams permet de lire les paramètres dynamiques présents dans l'URL.
 import { useParams } from 'react-router-dom'
 
-// Données locales contenant l'ensemble des logements.
 import rentalList from '../../data/logements.json'
 
-// Composants réutilisables utilisés pour construire une fiche logement.
 import Carousel from '../../components/Carousel'
 import Collapse from '../../components/Collapse'
 import Error from '../../components/Error'
 import Rating from '../../components/Rating'
 import Tags from '../../components/Tags'
 
-/**
- * PAGE DE DÉTAIL D'UN LOGEMENT
- * ----------------------------
- * Cette page est dynamique : le même composant Rental est utilisé pour tous les logements.
- * Le contenu affiché dépend uniquement de l'identifiant présent dans l'URL.
- *
- */
+// Page dynamique utilisée pour afficher le logement correspondant à l'URL.
 function Rental() {
-  /**
-   * RÉCUPÉRATION DE L'ID DANS L'URL
-   * --------------------------------
-   * Exemple : /logement/c67ab8a7
-   * Avec la route définie comme /logement/:rentalId,
-   * useParams() retourne notamment : { rentalId: 'c67ab8a7' }
-   *
-   * La déstructuration permet ici de récupérer directement rentalId.
-   */
+  // Récupère l'identifiant défini par la route /logement/:rentalId.
   const { rentalId } = useParams()
 
-  /**
-   * RECHERCHE DU LOGEMENT
-   * ---------------------
-   * find() parcourt rentalList et renvoie le PREMIER objet pour lequel
-   * item.id === rentalId est vrai.
-   *
-   * Contrairement à map(), find() ne crée pas une nouvelle liste :
-   * il cherche un seul élément précis.
-   *
-   * Si aucun logement ne correspond, find() renvoie undefined.
-   */
+  // find() retourne le logement dont l'id correspond à celui présent dans l'URL.
   const rental = rentalList.find((item) => item.id === rentalId)
 
-  /**
-   * GESTION D'UN ID INVALIDE
-   * -----------------------
-   * Si l'utilisateur modifie manuellement l'URL ou utilise un identifiant inexistant,
-   * rental vaut undefined.
-   * On arrête alors le rendu normal de la fiche et on retourne immédiatement Error.
-   *
-   */
+  // Un identifiant inexistant affiche directement la page 404.
   if (!rental) {
     return <Error />
   }
 
   return (
     <section className="rental-page">
-      {/*
-        Le Carousel reçoit :
-        - slides : le tableau complet des URLs des photos ;
-        - title : le titre du logement, utilisé notamment dans les textes alternatifs.
-      */}
       <Carousel slides={rental.pictures} title={rental.title} />
 
       <div className="rental-info-container">
         <div className="rental-info">
-          {/* Les informations simples peuvent être affichées directement depuis l'objet rental. */}
           <h1 className="rental-info__title">{rental.title}</h1>
           <p className="rental-info__location">{rental.location}</p>
 
           <div className="rental-info__tags">
-            {/*
-              rental.tags est un tableau.
-              On transmet ce tableau au composant Tags qui se charge de générer la liste.
-            */}
+            {/* Le tableau de tags est transmis au composant dédié. */}
             <Tags tag={rental.tags} />
           </div>
         </div>
 
         <div className="renter-info">
           <div className="renter-info__identity">
-            {/*
-              host est un objet imbriqué dans le logement.
-              On accède donc à son nom et à sa photo avec rental.host.name / picture.
-            */}
             <p className="renter-info__identity__name">{rental.host.name}</p>
             <img
               className="renter-info__identity__pic"
@@ -93,25 +46,13 @@ function Rental() {
             />
           </div>
 
-          {/*
-            Rating reçoit uniquement la note.
-            La logique qui décide quelles étoiles sont actives reste encapsulée
-            dans le composant Rating afin d'alléger cette page.
-          */}
+          {/* Rating gère lui-même l'affichage des cinq étoiles. */}
           <Rating rating={rental.rating} />
         </div>
       </div>
 
       <div className="rental-collapse-container">
-        {/*
-          RÉUTILISATION DU MÊME COMPOSANT
-          --------------------------------
-          Les deux blocs utilisent exactement le même composant Collapse.
-          Seules leurs props changent.
-
-          C'est un bon exemple de composant réutilisable : on évite de coder deux fois
-          la logique d'ouverture/fermeture.
-        */}
+        {/* Le même composant Collapse est réutilisé avec un contenu différent. */}
         <Collapse
           className="collapse collapse--small"
           title="Description"
@@ -123,11 +64,7 @@ function Rental() {
           title="Équipements"
           text={
             <ul>
-              {/*
-                equipments est un tableau.
-                map() transforme chaque équipement en <li>.
-                La valeur de l'équipement sert ici de key car chaque valeur est distincte.
-              */}
+              {/* Chaque équipement du tableau devient un élément de liste. */}
               {rental.equipments.map((equipment) => (
                 <li key={equipment}>{equipment}</li>
               ))}
