@@ -108,8 +108,6 @@ Projet11-main/
 │   ├── App.jsx
 │   ├── index.jsx
 │   └── style.css
-├── CHECKLIST_EVALUATION.md
-├── SOUTENANCE.md
 ├── package.json
 └── README.md
 ```
@@ -122,5 +120,3 @@ Projet11-main/
 - `src/components/Collapse/index.jsx` utilise `useState(false)` : chaque Collapse est donc fermé lors de son initialisation.
 - Les listes sont rendues avec `map()` et possèdent des clés React stables.
 - Les composants reçoivent les données nécessaires via leurs props.
-
-Consulter également `SOUTENANCE.md` et `CHECKLIST_EVALUATION.md` avant l'évaluation.
